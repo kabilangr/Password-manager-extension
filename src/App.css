@@ -4,33 +4,31 @@
 
 /* --- CSS Variables for Theming --- */
 :root {
-  /* Primary Colors - Green & Blue Gradient */
+  /* Primary Colors - Premium Emerald (Matches Website) */
   --primary-green: #10b981;
   --primary-green-light: #34d399;
   --primary-green-dark: #059669;
-  --primary-blue: #3b82f6;
-  --primary-blue-light: #60a5fa;
-  --primary-blue-dark: #2563eb;
+  --primary-blue: #3b82f6; 
   
   /* Accent Gradient */
-  --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-blue) 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  --gradient-primary: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
   
-  /* Neutral Colors - Dark Mode Default */
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary: #334155;
-  --bg-hover: #475569;
+  /* Neutral Colors - Dark Mode Default (Zinc/Slate) */
+  --bg-primary: #09090b; /* Zinc 950 */
+  --bg-secondary: #09090b; /* Zinc 950 (Cards) */
+  --bg-tertiary: #18181b; /* Zinc 900 */
+  --bg-hover: #27272a; /* Zinc 800 */
   
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #fafafa; /* Zinc 50 */
+  --text-secondary: #a1a1aa; /* Zinc 400 */
+  --text-muted: #52525b; /* Zinc 600 */
   
-  --border-color: #334155;
-  --border-light: rgba(255, 255, 255, 0.1);
+  --border-color: #27272a; /* Zinc 800 */
+  --border-light: rgba(255, 255, 255, 0.05);
   
   /* Status Colors */
-  --success: #22c55e;
+  --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
   
@@ -38,7 +36,7 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.3);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.2);
   
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -53,22 +51,22 @@
 
 /* Light Mode */
 [data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #e2e8f0;
-  --bg-hover: #cbd5e1;
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff; /* White cards */
+  --bg-tertiary: #f4f4f5; /* Zinc 100 */
+  --bg-hover: #e4e4e7; /* Zinc 200 */
   
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-primary: #09090b; /* Zinc 950 */
+  --text-secondary: #71717a; /* Zinc 500 */
+  --text-muted: #a1a1aa; /* Zinc 400 */
   
-  --border-color: #e2e8f0;
+  --border-color: #e4e4e7; /* Zinc 200 */
   --border-light: rgba(0, 0, 0, 0.05);
   
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
-  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.2);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.15);
 }
 
 /* --- Base Reset --- */
