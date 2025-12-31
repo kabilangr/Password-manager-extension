@@ -131,7 +131,7 @@ export async function initializeUserKey(masterPassword: string, saltBase64: stri
 // --- Secure Memory Wipe ---
 // Overwrites sensitive data before release to prevent memory scraping
 
-export function secureWipeString(_str: string): void {
+export function secureWipeString(): void {
     // In JavaScript, strings are immutable, so we can't directly overwrite them.
     // Best practice: ensure the reference is nullified after this call.
     // For maximum security, avoid storing passwords in variables longer than necessary.

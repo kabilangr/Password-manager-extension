@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((message: { action: string }) => {
 })
 
 chrome.runtime.onInstalled.addListener(() => {
-    console.log('CipherVault Extension installed')
+    // Initialization if needed
 })
 
 export async function storeMasterKeyHash(keyHash: string) {

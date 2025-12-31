@@ -2,7 +2,7 @@ const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
 
 import type { SecretDTO } from "../interface/SecretDTO";
 import type { UserDTO } from "../interface/UserDTO";
-import type { ActionResponse, AppError } from "../interface/AppError";
+import type { ActionResponse, AppError, ErrorCode } from "../interface/AppError";
 
 /**
  * Enhanced fetch wrapper with timeout and robust error parsing
@@ -43,10 +43,10 @@ async function apiFetch(endpoint: string, options: RequestInit = {}) {
 
 
 // Helper to convert unknown error to AppError
-function toAppError(e: unknown, code: any = 'INTERNAL_ERROR'): AppError {
+function toAppError(e: unknown, code: ErrorCode = 'INTERNAL_ERROR' as ErrorCode): AppError {
     if (e instanceof Error) {
         return {
-            code: (e as any).code || code,
+            code: (e as Error & { code?: ErrorCode }).code || code,
             message: e.message
         };
     }

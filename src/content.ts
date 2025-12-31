@@ -12,7 +12,6 @@ function fillPasswordField(secretId: string) {
     const passwordFields = document.querySelectorAll('input[type="password"]')
 
     if (passwordFields.length === 0) {
-        console.log("CipherVault: No password field found")
         return
     }
 
